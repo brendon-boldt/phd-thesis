@@ -1,0 +1,86 @@
+=========================================================================
+| Automated evaluation of emergent language proximity to human language |
+=========================================================================
+
+Potential papers
+----------------
+
+1. Formalizing emergent language generally
+    Providing a relatively shallow but all-encompassing formalism for
+    describing emergent language would aid in building a taxonomy of approaches
+    to emergent language and beyond.  The formalism would have to give basic
+    definitions for different variables of an emergent language experiment,
+    including environment, agent architecture, optimization procedure, and
+    changes in any of these variables (e.g., population dynamics, changing
+    environment).  Special care would need to be taken of prior literature such
+    that all is accounted for in the formalism.  For reference, this formalism
+    would similar but laxer than the formalization of an (PO)MDP.  This
+    formalization could also take a meta-approach and seek to characterize
+    types of research that can take place on emergent language.
+2. Formalizing the task of "approximating human language"
+    The task of "approximating human language" with emergent language is the
+    backbone of the field.  Essentially all applications of emergent language
+    rely on it being human-like to some degree---this we will term the "depth"
+    of the emergent language.  Therefore, we intend to lay the foundation for
+    methods of rigorously assessing the depth of an emergent language.  The
+    depth of an emergent language is necessarily multifaceted.  Intrinsically,
+    we might look at the syntactic, semantic, and functional characteristics of
+    emergent language.  Extrinsically, we would look at the applications of
+    emergent language and determine how to quantify how good an emergent
+    language is at performing that task.
+3. Bijections with unsupervised machine translation
+    At a basic level, language is meant to convey information.  Along these
+    lines, we can think of emergent languages being "more natural" when they
+    are able to convey more of the same information that natural languages do.
+    One way to determine this would be to treat machine translation as an
+    invertible function, f, with the domain being natural language and the
+    co-domain being the emergent language being evaluated.  The capacity of the
+    emergent language to express the same information should, then, correlate
+    with how close a sentence S is to f^-1(f(S)) (in expectation over some
+    corpus).  On the one hand, this process is a very intuitive measure of the
+    capacity of the emergent language, but it would also be a very noisy
+    signal.
+4. Extrinsic evaluation via machine translation pretraining vis-a-vis synthetic languages
+    Although this topic also involves machine translation, the approach is very
+    different.  The former approach is trying to gauge the informational
+    capacity of an emergent language through back-translation while this method
+    is simply looking at how well emergent language works as a prior for MT
+    systems.  The investigation would consist of using various natural,
+    synthetic, and emergent languages as pretraining data for MT (or possibly
+    another application) and using the performance on the task as a proxy for
+    similarity between the natural language and the pretraining language.  We
+    would also compare the emergent languages against a gamut of synthetic
+    languages to determine if there is anything special about the language
+    being emergent.  If rudimentary synthetic languages do as good a job as
+    emergent languages, it would seem that emergent languages are not
+    developing any deeper structure better approximating human language.
+5. Comparing embedding spaces with persistent homology:
+    The ability of large language models like GPT-3 to capture many elements of
+    language beyond mere lexical and syntactic qualities suggests that much of
+    the complexity of language can be accounted for in how words relate to each
+    other apart from semantics or grounding.  If we think of (possibly
+    contextualized) words as points in a high-dimensional space, this means
+    that the structure of this point cloud captures many aspects of language.
+    Persistent homology and other techniques in topological data analysis (TDA)
+    provide ways to algorithmically characterize the topological structure of
+    such a point cloud.  TDA, then could be applied to emergent, synthetic, and
+    natural languages to determine similarities.  We aim to answer the
+    question: are there topological structures in natural language which serve
+    as necessary or sufficient conditions for the complexity of natural
+    language?  If so, are these topological structures observed in emergent
+    languages?
+6. Grammar induction on emergent languages
+    Grammar induction is a natural way to try to explore the structure of
+    emergent language.  One of the assumptions of grammar induction, though, is
+    that there is already a latent structure, and the algorithm just has to
+    find it.  In the case of the emergent language, there is no guarantee that
+    there is a structure already there, so grammar induction may yield garbage
+    results.  This could potentially be resolved if there is a way to calibrate
+    the confidence of the induction model.  In an effort to analyze the
+    experiments, it would also be important to determine what forms of
+    structure ought to actually count as grammar in an emergent language.
+    Since neural networks are do not have the same "cognitive" restrictions as
+    humans, the range of legitimate grammar is likely to be different than that
+    of humans.
+7. Search for language universals in emergent language
+8. Level of abstraction in collaborative building tasks

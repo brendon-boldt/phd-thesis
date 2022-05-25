@@ -1,0 +1,57 @@
+# Next Steps for My PhD - March 2022
+
+- External committee member
+    - Kenny Smith
+    - Marco Baroni
+    - Angeliki Lazaridou
+    - Jakob Foerster
+- What aspects of my thesis do I want to cover?
+    - Language change (David)
+    - Embodied NLP (Yonatan)
+    - Philosophy of science (DoPhil?)
+    - DL-based emergent language (Baroni?)
+    - Evolution of language (TODO?)
+    - x Computational modeling
+- Internal committee member (in addition to David and Yonatan)
+    - Oana Carja (CBD)
+    - Lori
+    - Tuomas Sandholm
+    - Bing Liu (biology, https://www.cs.cmu.edu/~liubing/)
+    - Philosophy department
+        - https://www.cmu.edu/dietrich/philosophy/people/faculty/danks.html
+        - https://www.cmu.edu/dietrich/philosophy/people/faculty/harrell.html
+        - https://www.cmu.edu/dietrich/philosophy/people/faculty/kevin-kelly.html
+        - https://www.cmu.edu/dietrich/philosophy/people/faculty/simons.html
+        - https://www.cmu.edu/dietrich/philosophy/people/faculty/smith.html
+        - https://www.cmu.edu/dietrich/philosophy/people/faculty/tom-werner.html
+        - https://www.cmu.edu/dietrich/philosophy/people/faculty/kevin-zollman.html
+- Student collaborations
+    - Nate: Data augmentations for low-resource NLP
+    - Hao: ???
+- PhD direction
+    - A little bit of everything to illustrate the potential structure in ELR?
+    - Alternatively, focus on making more significant progress on one topic within ELR.
+        - Evaluating the complexity of emergent language based on cycle-consistent MT
+        - Evaluating the complexity of EL via some abstract metric
+        - Philosophy of emergence and defining what is emergence.
+            - I don't think this is the best path because I believe that what is or is not emergent be pragmatically defined by whatever advances there are in EL
+- Potential papers for PhD
+    * Sketching a path for emergent language research, broadly speaking
+    * Introducing a theoretical model
+    - Testing a theoretical model in a fully scientific way
+    - Formalizing the task of "approximating human language"
+    - Applying emergent language to a downstream task
+    - Using a downstream task as an extrinsic measure of performance
+    - Creating an abstraction for emergent language environments
+        - Moving from "realistic" environments to abstract characterizations
+        - Although you did not have this in mind, this seems to be an necessary step of formulating a theoretical model
+        - The more broad-reaching the theory, the more the model abstracts from the particulars
+- Papers for topic: Automated evaluation of emergent language proximity to human language
+    - Characterizing what levels of similarity are needed for different applications/goals of emergent language
+    - Extrinsic evaluation via MT pretraining vis-a-vis synthetic languages
+    - Formalizing the task of "approximating human language"
+        - Syntax
+        - Semantics
+        - Pragmatics, function
+    - Something interlingua, unsupervised MT, and aligning vector spaces
+    - Comparing embedding spaces with persistent homology:
