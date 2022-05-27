@@ -11,17 +11,9 @@
 \usepackage{xcolor}         % colors
 \usepackage{subcaption,graphicx,listings,algorithm,amsmath}
 \usepackage{natbib}
+\usepackage[capitalize]{cleveref}
 
 \title{The Structure of the Emergent Language Revolution}
-
-
-% The \author macro works with any number of authors. There are two commands
-% used to separate the names and addresses of multiple authors: \And and \AND.
-%
-% Using \And between authors leaves it to LaTeX to determine where to break the
-% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
-% authors names on the first line, and the last on the second line, try using
-% \AND instead of \And before the third author name.
 
 
 \author{%
@@ -73,18 +65,39 @@ The skeleton of this approach realizing language-learning agents as neural netwo
 What makes this approach distinct from classical approaches is that general-purpose neural network dramatically decrease the constraining inductive biases which would otherwise trivialize the truly \emph{emergent} properties of language learned by the agents.
 
 \subsection{Defining ``emergent''}
+\bjb{Inherently tricky to define. I think it would best to go with some pragmatically-focused, operationalizable idea of ``emergence'' which respects the literature but doesn't get caught in the details.}
 
 \section{What emergent language can do}
+Natural language processing, as typically pursued, starts with human language as a whole and tries to model it at progressively deeper levels; this can be thought of as a ``top-down'' paradigm.
+Emergent language, on the other hand, begins with agents which have a full understanding of whatever language they invent and progressively tries to increase the sophistication of this language; this is a ``bottom-up'' paradigm, in contrast.
+In other words, it aims at creating language-capable computer agents from first principles.
+We identify emergent language as the center of a potential \emph{revolution} for this reason.
+\cmg{Justify this better.}
+
 \subsection{Embodied language}
-\citet{bisk_experience_2020}
+\citet{bisk_experience_2020} argue that human language, in all its complexity, can only be understood in conjunction with \emph{embodiment}.
+Language is not a self-contained system of textual symbols it necessarily connects, to speech and hearing, acting and reacting, and interaction with other language users.
+\cmg{Cite GPT3 and how it casts some doubt on this.}
+
+The problem which this line of thinking unveils is that in order for models to acquire increasingly deep understanding of language, they require training data which is increasingly hard to acquire.
+Massive language models like GPT3 \cmg{cite} require massive amounts of data.
+This has been achieved \cmg{mention world scope} on the level of text by scraping the World Wide Web.
+This could feasibly be done (although not without ethical concerns) for audio and video data from platforms like YouTube, Zoom, and surveillance cameras.
+But adding in the physical and interactive social dimensions all but requires an army of robots to be raised as if they were children.\footnote{I emphatically do not endorse this.}
+
+Emergent language provides a way around this problem as simulations of audio, video, physics, and interaction can be scaled merely by scaling computing resources.
+Going the route of emergent language, of course, introduces its own set of problems which we discuss at more length in \cref{sec:prereqs}.
+
 
 \subsection{Self-play and emergent behavior}
+
+
 \cmg{OpenAI hide and seek}
 \cmg{OpenAI Five}
 \cmg{OpenAI Five}
-\section{The prerequisites of a revolution}
+\section{The prerequisites of a revolution}\label{sec:prereqs}
 
-\chapter{The Goals of Emergent Language Research}
+\chapter{The Goals of Emergent Language Research}\label{sec:goals}
 \section{Scientific goals}
 \section{Engineering goals}
 \section{Measuring progress}
