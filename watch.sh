@@ -1,6 +1,6 @@
 #!/bin/sh
 
-while inotifywait -e modify main.tex; do
+while inotifywait -e modify *.tex; do
     latexmk \
         -f \
         -pdf \
