@@ -1,11 +1,30 @@
 \setcounter{chapter}{-1}
 \chapter{Planning}
 
+\section{Thesis Structure}
+I am having second thoughts on this specific structure.
+Namely, looking at the individual goals of emergent language research, each has its own challenges that (1) cookie-cutter recommendations are of little help to and (2) probably do not need methodology recommendations when people clearly pursue that goal.
+The issue in the literature seems more often that these goals are not even clarified in the first place, and while I can certainly provide a list of clear goals (and I still hope to), it is not as if I can tell people what problems they are actually trying to solve when they go write a paper (unless I'm one of their reviewers).
+
+For example, if people were trying to study the evolution of language with emergent language, I suspect they would already have a solid background in the evolution of language in which case they would be well-attuned to what sort of experiments and data would actually be helpful to that discipline.
+With regards to the engineering goal of using emergent language as an alternative data paradigm, I think that goal could derive benchmarks from extant ones in machine translation and other large NLP tasks to which it could be applied.
+For goals like robust multi-agent communication or cooperating with humans, I think it would be important to look to emergent language's big brother reinforcement learning; what I think we would find there is that there aren't very many benchmarks or widely-used metrics which measure overall solution quality.
+
+This is not at all to say this thesis' tack is dead in the water.
+Rather, I think it should steer away from making general methodological recommendations and focus on the more focused line of reasoning:
+\begin{enumerate}
+    \item For all of these wonderful applications of emergent language, emergent language needs to be sufficiently advanced/sophisticated/human-like.
+    \item This requires a way both to measure this desideratum (cf., metrics, benchmarks) as well as reason about how to design it and improve upon it in practice (cf., theoretical models).
+    \item Much of the literature seems to be poking around at this idea of general progress but is doing a poor job of it due to lack metrics, benchmarks, models, etc.\@ (or so I think).
+\end{enumerate}
+
+
+
 \section{Committee}
 \begin{itemize}
     \item David: computational linguistics, language change
     \item Yonatan: embodied NLP, robotics
-    \item \cmg{WIP} Philosophy science from Philosophy of Department
+    \item \cmg{WIP} Philosophy science from Philosophy Department
     \item \cmg{WIP} External
         \begin{itemize}
         \item Marco Baroni: contemporary emergent language
@@ -37,10 +56,12 @@ The general idea, then would be that the non-NSF papers would be completed prima
   You should not be afraid of doing work relevant to a grant before the grant begins. In fact, work in the area of the grant shows that the proposed work is possible and that you are capable of carrying it out. I strongly suggest working upon some epirical/ML work up front.
 }
 
-\noindent\textbf{Title}\quad Benchmarking the Quality of Emergent Language
+\paragraph{Title}
+Improving Low-Resource NLP with Emergent Language
 
 \paragraph{Proposed Work}
 \begin{itemize}
+    \item Review paper on goals of emergent language research
     \item Data-driven metric of how ``human-like'' an emergent language is
         \begin{itemize}
         \item Semantics-augmented emergent language comparison
@@ -50,8 +71,16 @@ The general idea, then would be that the non-NSF papers would be completed prima
         \item Does linguistic proximity between a human and emergent language correlate with pretraining quality?
         \item Do surface features or underlying semantics matter more for pretraining?
         \end{itemize}
-    \item Case study in methods of engineering; possibly an emergent language benchmark
+    \item Benchmark of emergent language
+        \begin{itemize}
+        \item This might require an analysis on various metrics in emergent language
+        \end{itemize}
+    \item Research program
 \end{itemize}
+
+%% NOTES %%
+% - How do the philosophical aspects of this thesis apply to other fields
+% - Reverse game theory and mechanism design
 
 \paragraph{Broader Impact}
 \drm{I think these are all good, but you need to think about them less tentatively.}

@@ -25,6 +25,10 @@
         - https://www.cmu.edu/dietrich/philosophy/people/faculty/smith.html
         - https://www.cmu.edu/dietrich/philosophy/people/faculty/tom-werner.html
         - https://www.cmu.edu/dietrich/philosophy/people/faculty/kevin-zollman.html
+    - Philosophy department, second try
+        - https://www.cmu.edu/dietrich/philosophy/people/faculty/kevin-kelly.html
+        - https://www.cmu.edu/dietrich/philosophy/people/faculty/smith.html
+        - https://www.cmu.edu/dietrich/philosophy/people/faculty/kevin-zollman.html
 - Student collaborations
     - Nate: Data augmentations for low-resource NLP
     - Hao: ???
