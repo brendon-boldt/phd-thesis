@@ -2,7 +2,7 @@
 \chapter{Planning}
 
 \section{Thesis Structure}
-I am having second thoughts on this specific structure.
+I am having second thoughts on this \bjb{i.e., previous} specific structure.
 Namely, looking at the individual goals of emergent language research, each has its own challenges that (1) cookie-cutter recommendations are of little help to and (2) probably do not need methodology recommendations when people clearly pursue that goal.
 The issue in the literature seems more often that these goals are not even clarified in the first place, and while I can certainly provide a list of clear goals (and I still hope to), it is not as if I can tell people what problems they are actually trying to solve when they go write a paper (unless I'm one of their reviewers).
 
@@ -24,7 +24,7 @@ Rather, I think it should steer away from making general methodological recommen
 \begin{itemize}
     \item David: computational linguistics, language change
     \item Yonatan: embodied NLP, robotics
-    \item \cmg{WIP} Philosophy science from Philosophy Department
+    \item \cmg{WIP} Philosophy of science from Philosophy Department
     \item \cmg{WIP} External
         \begin{itemize}
         \item Marco Baroni: contemporary emergent language
@@ -34,60 +34,122 @@ Rather, I think it should steer away from making general methodological recommen
 \end{itemize}
 
 \section{Publications}
-\begin{itemize}
-    \item{} \cmg{submitted} Case study in scientific methods: \textsc{FiLex}
-    \item{} \cmg{todo} The goals of emergent language; science--engineering distinction
-    \item{} \cmg{nsf} \cmg{todo} data-driven metric
-    \item{} \cmg{nsf} \cmg{todo} characteristic-driven metric
-    \item{} \cmg{todo} research program for emergent language
-    \item{} \cmg{potential} Recommendations for scientific methods
-    \item{} \cmg{potential} Recommendations for engineering methods
-    \item{} \cmg{nsf} \cmg{potential} Case study in engineering
-\end{itemize}
+
+\subsection{New Structure}
+
+% The basic idea is
+%     (1) look at all these goodies (1 paper),
+%     (2) we need HLR for these goodies (maybe 1 paper),
+%     (3) we need to measure HLR (1 paper),
+%     (4) here are the components of such a metric; text-based (1 paper), grounded semantics (1 paper), linguistics (2 papers).
+
+
+\paragraph{A review of the goals and applications of emergent language}
+This paper will expand upon the ``Goals'' section of the ``systematic research'' ICML 2022 paper.
+The basic format of the paper will be a review of the various goals or applications of emergent language as a technique; we will add to the review with any goals we think are relevant but missing.
+I plan to start with the goals from the ICML paper but do a more extensive literature review and rework the categorization, if necessary.
+I do not plan to retain the science--engineering distinction because I think that stricter taxonomy was primarily serving to set up the recommendations of different methods; instead, I plan to make similar but more general distinction between knowledge-driven goals and task-driven goals.
+The primary purpose of this paper is to serve as a basis for subsequent metrics we introduce.
+Since a metric fundamentally makes a value judgment, it is then necessary to articulate what we one is aiming for.
+As such, it will be important to present a measurable understanding of each goal (to the extent which is reasonably possible).
+
+\paragraph{Typology for emergent languages}
+The goal of this paper is to come up with a set of metrics which characterize an emergent language intrinsically (i.e., its ``form'').
+This paper will have to deviate somewhat from typical human language typology because such languages already have a discernible structure and a guarantee of function whereas an emergent language could easily be structureless nonsense.
+A non-exhaustive list of traits that we may consider include:
+    compositionality, subword structure, sentence structure (e.g., length), noise in communication channel, population size, sender/receiver architecture, originating game type, lexicon entropy.
+There two primarily purposes of such a characterization: taxonomy and prediction.
+Giving a taxonomic characterization of an emergent language would be helpful to researchers looking to study or use an emergent language which presents certain traits; this paper would make it easy, then, to create a database of emergent languages that could be searched easily for languages relevant to one's research.
+Secondly, the characterization of the structures of an emergent language should be predictive of how well it perform on downstream tasks.
+
+\paragraph{Roughly characterizing the biological plausibility of emergent languages}
+If emergent languages are going to serve as a useful source of evidence for evolutionary linguistics or cognitive science, there will have to be some amount of biological plausibility to the environments and agent architectures.
+While there does not have to be a one-to-one correspondence, it is necessary to establish analogy between various components of natural and artificial systems.
+Furthermore, it is important to establish the inductive biases and simplifying assumptions of the emergent language environments do not dominate what ever phenomenon is being studied.
+This will be an interdisciplinary work which attempts to fit emergent language into the paradigm of simulation-based investigation already present in the aforementioned fields.
+
+\paragraph{Benchmark for emergent language as pretraining data for NLP tasks}
+This paper will describe and implement a handful of pretraining tasks for emergent languages as a way to roughly evaluate how human-like they are.
+Additionally, the benchmark will serve as way to tell how close emergent languages are to achieving the general goal of being a viable alternative to real, human-generated data in the training, development, and testing of NLP models.
+We will use a representative sample of NLP tasks which operate at various depths.
+For example, part-of-speech tagging is relatively shallow compared to a task like machine translation.
+Language modeling and parsing would serve as intermediate tasks, in this sense.
+
+\paragraph{Translating emergent language through semantic grounding}
+Most machine translation requires parallel texts for training data that, at some point, required a bilingual human to perform translation.
+While unsupervised MT does not require parallel texts at all, it is highly dependent on the parallel structure between two languages and their vocabularies, such an assumptions which does not hold for emergent languages.
+Thus, the lack of parallel data is one of the first steps for machine translation with emergent languages as we have no access to bilingual agents.
+We can generate parallel data for a human and emergent language so long as we can establish parallel semantics, that is, both languages are grounded in the same environment.
+We can use a collaborative Minecraft building task as a possible data source as we have human-human data for this task and it would be possible to train computer agents to complete this task using emergent language.
+
+\paragraph{Emergent languages vs.\@ synthetic languages for downstream NLP tasks}
+It has been shown that pretraining on emergent languages can improve the performance of neural networks on NLP tasks, but what property of emergent languages can we attribute this to?
+An optimistic explanation is that the true \emph{emergence} of the language confers upon it some deep properties which mimic the structure and nuance of natural language.
+While this is difficult to test directly, we can compare it against a more pessimistic hypothesis that the difference can be explained by surface-level syntactic patterns alone.
+Thus, we can generate synthetic languages via context-free grammars of varying complexities and compare the effect of pretraining on performance in a handful of tasks to that provided by emergent languages.
+
+\paragraph{Level of abstraction in a collaborative building task}
+Using the aforementioned Minecraft collaborative building task, we can compare the communication strategies of emergent language with natural language.
+Namely, we can introduce and apply a metric for the \emph{level of abstraction} that each language applies to.
+This metric would measure the directness of correspondence between language and actions in the block world, with the idea that abstract language will be less easily grounded in the environment while still being effective at communicating the task.
+The hypothesis here is that the emergent language will very concrete and low-level, where utterances correspond very closely to exactly what block is placed where in the environment.
+
+\paragraph{Search for linguistic universals in emergent language}
+Universals properties in human language, according to some interpretations, represent strategies which are more or less necessary for expressing the range of ideas which humans need to communicate.
+An example of this would be the presence of nouns and verbs, roughly speaking, in all languages; this is because humans fundamentally need to be able to communicate about events and entities.
+This would imply that emergent languages do not match natural language's capacity to express ideas if these linguistic universals are not present in the emergent language.
+Alternatively, it could also mean that the structure of the neural networks generating the emergent language operate significantly different from how the human brain uses language.
+
+\paragraph{Summarization of the form and function of emergent languages}
+This will be a paper to tie together previous work studying the form and function of language, measured by intrinsic and extrinsic metrics respectively.
+Form, in the sense of intrinsic metrics, means that properties of the language that can be measured by observing the language itself and how it used.
+Function, in the sense of extrinsic metrics, means how suitable the language is for completing some task such as pretraining a neural network.
+When compared against human language in this fashion, we are taking a black-box, data-driven approach to gauging how similar the emergent language is to human language.
+The paper will also introduce a tool for generating such reports.
+Similar to the typological analysis of emergent languages mentioned above, the primary purpose of this summarization is taxonomy in service of more effective research.
+Going beyond purely intrinsic summary, the addition of extrinsic metrics should give a more robust, real-world sense of how sophisticated an emergent language is.
+
+\paragraph{The relationship between intrinsic and extrinsic metrics of emergent language}
+The primary idea here is that it should be possible to predict the extrinsically-measured quality of an emergent language based on set of extrinsic metrics which captures all important information about the language.
+If there is significantly variability in the extrinsic metrics that are not accounted for by the intrinsic metrics, it suggests that there are important properties of the language which are not accounted for by the intrinsic metrics.
+Performing this task of predicting the extrinsic based on the intrinsic helps to bridge a fundamental gap which the intrinsic/extrinsic divide presents:
+    intrinsic metrics represent a direct understanding of some property of the language but are narrow and might miss relevant details while extrinsic methods are sensitive to a broad range of properties of the language yet are black boxes and difficult to understand by themselves.
+
 
 \section{NSF grant proposal}
-\bjb{%
-I am currently thinking that the NSF grant proposal should focus on (or at least start with) the publications mentioned above tagged with \cmg{nsf}.
-These publications are the most concrete and lean towards machine learning and computational linguistics more than philosophy of science.
-The general idea, then would be that the non-NSF papers would be completed primarily before the NSF grant kicks in.%
-}
-
-\drm{%
-  You should not be afraid of doing work relevant to a grant before the grant begins. In fact, work in the area of the grant shows that the proposed work is possible and that you are capable of carrying it out. I strongly suggest working upon some epirical/ML work up front.
-}
 
 \paragraph{Title}
-Improving Low-Resource NLP with Emergent Language
+Plug-and-Play Typological Analyzer for Emergent Language
+
+\paragraph{Summary}
+The number of papers published on emergent communication and language has been increasing alongside the growth of deep neural networks.
+Despite the increased interest in generating emergent language, the scope of analyses performed on emergent language is rather limited, often focusing on a narrow characterization of the language like compositionality and generalizability.
+
+We propose introducing a benchmark for emergent language which comprises a collection of metrics which measure a wide range of features of an emergent language including:
+\begin{itemize}
+    \item Lexical: vocabulary size, entropy
+    \item Syntactic: parts of speech, presence of tree structure
+    \item Semantic: compositionality, generalizability
+    \item Cognitive: plausibility
+    \item Social:
+    \item Extrinisc:
+\end{itemize}
 
 \paragraph{Proposed Work}
-\begin{itemize}
-    \item Review paper on goals of emergent language research
-    \item Data-driven metric of how ``human-like'' an emergent language is
-        \begin{itemize}
-        \item Semantics-augmented emergent language comparison
-        \end{itemize}
-    \item Linguistic feature-focused metric of how ``human-like'' an emergent language is
-        \begin{itemize}
-        \item Does linguistic proximity between a human and emergent language correlate with pretraining quality?
-        \item Do surface features or underlying semantics matter more for pretraining?
-        \end{itemize}
-    \item Benchmark of emergent language
-        \begin{itemize}
-        \item This might require an analysis on various metrics in emergent language
-        \end{itemize}
-    \item Research program
-\end{itemize}
 
 %% NOTES %%
 % - How do the philosophical aspects of this thesis apply to other fields
 % - Reverse game theory and mechanism design
 
 \paragraph{Broader Impact}
-\drm{I think these are all good, but you need to think about them less tentatively.}
+
+\cmg{What are the direct impacts of a metric/benchmark?}
 \begin{itemize}
-    \item \cmg{direct} Assist researchers in emergent language
-    \item \cmg{direct} Learn about inductive biases of neural networks?
-    \item \cmg{direct} Measure the understandability of natural communication in multi-agent systems?
-    \item \cmg{indirect} Alternative data source for low-resource language \drm{or domain?}
-    \item \cmg{indirect} Alternative multimodal data source
+    % \item \cmg{direct} Assist researchers in emergent language
+    % \item \cmg{direct} Learn about inductive biases of neural networks?
+    % \item \cmg{direct} Measure the understandability of natural communication in multi-agent systems?
+    \item \cmg{indirect}
+        Improve quality of synthetic data for low-resource domains such endangered languages and grounded language data.
+    \item \cmg{indirect}
+        Improve quality of synthetic data for low-resource domains such endangered languages and grounded language data.
 \end{itemize}
