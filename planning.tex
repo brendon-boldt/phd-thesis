@@ -1,6 +1,8 @@
 \setcounter{chapter}{-1}
 \chapter{Planning}
 
+\cmg{Think about an additional category on top of intrinsic and extrinsic which captures where the emergent language comes from, the configuration of the environment. This might just be a subcategory of intrinsic properties.}
+
 \section{Notes on the thesis direction}
 I am having second thoughts on this \bjb{i.e., previous} specific structure.
 Namely, looking at the individual goals of emergent language research, each has its own challenges that (1) cookie-cutter recommendations are of little help to and (2) probably do not need methodology recommendations when people clearly pursue that goal.
@@ -117,9 +119,9 @@ Performing this task of predicting the extrinsic based on the intrinsic helps to
 \section{NSF grant proposal}
 
 \paragraph{Title}
-Plug-and-Play Typological Analyzer for Emergent Language
+Analyzing the form and function of emergent language
 
-\paragraph{Summary}
+\subsection{Summary}
 The number of papers published on emergent communication and language has been increasing alongside the growth of deep neural networks.
 Despite the increased interest in generating emergent language, the scope of analyses performed on emergent language is rather limited, often focusing on a narrow characterization of the language like compositionality and generalizability.
 
@@ -133,24 +135,52 @@ We propose introducing a benchmark for emergent language which comprises a colle
     \item Extrinisc:
 \end{itemize}
 
-\paragraph{Proposed Work}
+\subsection{Proposed Work}
 
-. \cmg{Which paper from above would we specifically center the grant around?}
+\cmg{Which papers from above would we specifically center the grant around?}
 
 %% NOTES %%
 % - How do the philosophical aspects of this thesis apply to other fields
 % - Reverse game theory and mechanism design
 
-\paragraph{Broader Impact}
+\subsection{Broader Impact}
 
-.\\\cmg{What are the direct impacts of a metric/benchmark?}
+% \item \cmg{direct} Assist researchers in emergent language
+% \item \cmg{direct} Learn about inductive biases of neural networks?
+% \item \cmg{direct} Measure the understandability of natural communication in multi-agent systems?
+% \item \cmg{indirect} Improve quality of synthetic data for low-resource domains such endangered languages and grounded language data.
 
-\begin{itemize}
-    % \item \cmg{direct} Assist researchers in emergent language
-    % \item \cmg{direct} Learn about inductive biases of neural networks?
-    % \item \cmg{direct} Measure the understandability of natural communication in multi-agent systems?
-    \item \cmg{indirect}
-        Improve quality of synthetic data for low-resource domains such endangered languages and grounded language data.
-    \item \cmg{indirect}
-        Improve quality of synthetic data for low-resource domains such endangered languages and grounded language data.
-\end{itemize}
+\paragraph{Efficiently classify and organize emergent languages}
+In order to understand the field of emergent language, it is important to be aware of the variations of emergent languages themselves and the environments whence they arise.
+The current method of doing this is simply by reading the papers which introduce an emergent language or summaries thereof.
+The emergent language ``snapshot'' we introduces provides both a taxonomy of emergent languages as well as data-driven metrics of how well they align with human languages.
+While such a snapshot would not be exhaustive of the nuances of different environments, they would be very useful for researchers inside and outside the field.
+Inside the field, such a taxonomy could be used to quickly find related methods and results.
+More importantly, the taxonomy could help researchers outside of emergent language yet looking to apply it elsewhere better understand exactly what emergent languages exist and which might be most relevant to their own work.
+
+\paragraph{Make emergent language more accessible outside the field}
+The precise nature of (contemporary) emergent languages is not always well understood by people outside of the field.
+This is in part because they are derived from neural networks and reinforcement learning which require a nontrivial amount of expertise to understand.
+Furthermore unfounded optimism regarding artificial intelligence and neural networks by non-practitioners could inflate their estimation progress with emergent language as actually made.
+As a result, providing snapshots of emergent languages' characteristics (along with sample utterances) would better portray the state of emergent languages without requiring significant expertise.
+Additionally, introducing a unified tool for creating such snapshots would help researchers in adjacent fields perform a wide variety of emergent language analyses without needing to have a deep understanding of each component.
+
+\paragraph{Measure how well emergent languages reach their goals}
+Currently, it is unclear to what degree emergent languages are effectively applied to different tasks.
+Our work focuses on aggregating methods that gauge the suitability of emergent languages for different tasks whether they be knowledge-driven like evolutionary linguistics or task-driven like low-resource machine translation.
+An aggregation and clarification of such measures will help researchers orchestrate a joint effort to improve emergent language knowledge and techniques.
+Common datasets and benchmarks have been integral to the development of fields like computer vision (e.g., ImageNet) and natural language processing (e.g., SQuAD, WMT); thus, it would be fruitful to replicate this in emergent language to the degree it is possible.
+
+\paragraph{Provide data for low-resource domains}
+Emergent language serves to benefit low-resource domains insofar as it can provide realistic synthetic data based on the unique constraints of that domain.
+For example, for an endangered language which has no high-resource typological neighbors, one could generate an emergent language which is has more typological similarities; the emergent language, which is naturally high-resource, could be used to pretrain neural models or augment the low-resource data.
+Another low-resource domain targeted by emergent language is multi-modal or embodied data.
+It is naturally quite difficult to collect embodied language data (e.g., compare collecting first-person video and audio vs.\@ text alone), yet emergent language, since it is entirely simulated, can easily provide such data.
+What distinguishes emergent language from manually generating such data is that the \emph{emergent} property of the language means that it has developed its structures through functional constraints within an environment as opposed to being artificially constrained by a human.
+\cmg{How does the proposed work actually achieve this, though?}
+
+\paragraph{Simulate human communication behavior at a high level of granularity}
+Current methods of simulating human language use entail assuming some model of communication and behavior (logically) prior to implementing and applying the simulation.
+With emergent language and its use of neural networks, the model of communication is not presupposed in the simulation, and the simulation can learn its communication strategies based on environmental constraints, better matching how humans develop communications strategies.
+Nevertheless, an important problem arises from the unconstrained nature of neural networks: it could be that the simulation bears no relation to human language use at all.
+Thus, the introduction of our snapshot of emergent language will give a baseline sense of whether the language adequately mimics human language at all.
