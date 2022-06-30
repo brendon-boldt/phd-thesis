@@ -90,6 +90,8 @@ An optimistic explanation is that the true \emph{emergence} of the language conf
 While this is difficult to test directly, we can compare it against a more pessimistic hypothesis that the difference can be explained by surface-level syntactic patterns alone.
 Thus, we can generate synthetic languages via context-free grammars of varying complexities and compare the effect of pretraining on performance in a handful of tasks to that provided by emergent languages.\drm{Interesting experiments. Sounds more achievable that sound of the other studies.}
 
+\paragraph{Discriminating between emergent and human languages via clustering}
+
 \paragraph{Level of abstraction in a collaborative building task}
 Using the aforementioned Minecraft collaborative building task, we can compare the communication strategies of emergent language with natural language.
 Namely, we can introduce and apply a metric for the \emph{level of abstraction} that each language applies to.
@@ -125,17 +127,22 @@ Analyzing the form and function of emergent language
 
 \subsection{Summary}
 The number of papers published on emergent communication and language has been increasing alongside the growth of deep neural networks.
-Despite the increased interest in generating emergent language, the scope of analyses performed on emergent language is rather limited, often focusing on a narrow characterization of the language like compositionality and generalizability.
+Despite the resulting accumulation of many pieces of knowledge and evidence, the orchestration of this collection into a cohesive whole is largely absent.
+One factor in this is a relatively narrow focus in analyzing emergent language; research is primarily concerned with characterizing compositionality and generalizability in emergent language.
+Although these properties are fundamental to emergent language, they are not alone sufficient to characterize and summarize the relevant properties of an emergent language.
+Hence, we propose introducing and implementing a set of metrics which serve generate a ``snapshot'' or ``summary'' of an emergent language so as to understand a handful of high-level characteristics regarding its form and function without needing to dig into the exact implementation itself.
 
-We propose introducing a benchmark for emergent language which comprises a collection of metrics which measure a wide range of features of an emergent language including:
+Such a tool would take into a number of features of emergent language into account, including:
 \begin{itemize}
     \item Lexical: vocabulary size, entropy
     \item Syntactic: parts of speech, presence of tree structure
     \item Semantic: compositionality, generalizability
-    \item Cognitive: plausibility
-    \item Social:
-    \item Extrinisc:
+    \item Cognitive: biological plausibility, capacity, constraints/biases
+    \item Social: population size, symmetric speakers, generational transfer
+    \item Extrinsic: pretraining for machine translation/language modeling, grammar induction
 \end{itemize}
+\cmg{give a more detailed illustration of how one would run this benchmark}
+\cmg{explain the purpose and impact, briefly}
 
 \subsection{Proposed Work}
 
