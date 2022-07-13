@@ -1,0 +1,48 @@
+\chapter{Grant Proposal}
+
+{\Large\bf Interpretable Summaries of Emergent Languages}
+
+\section{Introduction}
+
+The field of emergent language combines the technique of self-play from reinforcement learning and the language-learning ability of neural networks to simulate the evolution of language from scratch.
+Work like \cmg{cite AlphaZero, MuZero} and \cmg{cite OpenAI hide and seek} have demonstrated that sophisticated, interpretable behavior can emerge from learning and environment dynamics alone without additional human input.
+Yet these successes have taken place in environments with clear, measurable goals (e.g., winning at chess, increasing score in Pac-Man).
+Large language models like GPT-3 \cmg{cite} demonstrate that many of the nuances and complexities of language can be captured in neural networks.
+% These techniques, while effective, do not ``automatically work'' and require careful engineering of the environment, input data, and learning algorithm to be successful.
+% As such, the combination of these two techniques in emergent language is a research program unto itself.
+Such models rely on massive amounts of ground truth data to train on.
+
+Since emergent language research started in 2016, over $100$ papers have been published on the subject, but there has yet to be an emergent language surpassing a rudimentary level.
+In general, emergent language is a difficult topic despite the successes of self-play and neural networks.
+In emergent language, the ultimate goal of the environments is to foster human language-like communication---not easily measurable like in traditional self-play.
+And the language-generating neural networks are only trained on each other's output---no ground truth language like large language models.
+
+One of the largest contributing factors here is that emergent language is very open-ended and, as such, contains a large number of variables in any given experiment.
+As a result, research papers in the field are often disconnected and ``one-off'', as opposed to incrementally making progress toward a unified goal.
+\cmg{Probably need one more sentence before this.}
+In order to better support connected research based on a unified view of the field, we propose developing and implementing an automatic method for summarizing emergent languages.
+Such summaries would allow researchers to quickly understand the high-level characteristics of an emergent language within well-defined taxonomy without having read through the individual papers themselves.
+
+% Current research in emergent language has been focused on finding the conditions (e.g., environments, neural network architectures) under which communication arises that has the basic properties of human language.
+% \cmg{compositionality and generalizability}
+
+Despite the resulting accumulation of many pieces of knowledge and evidence, the orchestration of this collection into a cohesive whole is largely absent.
+One factor in this is a relatively narrow focus in analyzing emergent language; research is primarily concerned with characterizing compositionality and generalizability in emergent language.
+Although these properties are fundamental to emergent language, they are not alone sufficient to characterize and summarize the relevant properties of an emergent language.
+Hence, we propose introducing and implementing a set of metrics which serve generate a ``snapshot'' or ``summary'' of an emergent language so as to understand a handful of high-level characteristics regarding its form and function without needing to dig into the exact implementation itself.
+
+\cmg{clear statement of what is being proposed}
+
+\vspace{0.2in} \hrule \vspace{0.2in}
+
+Emergent language shows great promise by leveraging self-play and neural networks.
+No convincing applications have been developed yet.
+Research papers are disconnected, exploring problems in semi-isolation partly because there are so many variables in emergent language.
+Without an organized way to look at these manifold variables, it is difficult to determine how results from one experiment apply to another since there is no way to account for confounding factors.
+We propose a method for automatically summarizing emergent languages.
+This will facilitate better organization.
+
+\section{Summarizing Emergent Language}
+
+\section{Technical Element 1: Intrinsic Metrics}
+\section{Technical Element 2: Extrinsic Metrics}

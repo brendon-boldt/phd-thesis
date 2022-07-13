@@ -1,0 +1,94 @@
+\chapter{The Emergent Language Revolution}
+\section{Measuring progress in emergent language}
+\section{What emergent language is}
+Emergent language \drm{research?} is the study of simulations of how language arises \emph{de novo}.
+This is distinguished from two related topics: the evolution of language and computational models of diachronic language change \drm{though it is related to them in interesting ways}.
+The former is similar in subject matter, the origin of language, but relies on different methods such as the comparative method from linguistics, human and animal psychology, or anthropology.
+The latter is similar in its methods, simulations and computational models, but typically looks at language change starting with a fully-fledged human language rather than starting from nothing.
+The combination these topics and techniques make emergent language its own distinct field with unique goals and challenges.
+
+This field lives also under the names ``language emergence'' and ``emergent communication.''
+The former name is simply less common, but the latter implies a slightly different subject matter.
+Although, speaking of ``communication'' avoids the philosophical mire of \drm{defining} precisely what makes a language, speaking of ``language'' better emphasizes the fact that the distinctly human phenomenon of language is what the field cares about most.
+For this reason, we will favor ``emergent language'' in this work.
+
+\subsection{Classical approaches to emergent language}
+There are some approaches to emergent language, primarily \drm{dating} to before the late 2010's, that use methods apart from deep learning, such as mathematical models, shallow neural networks, or laboratory experiments \cmg{cite} \drm{You might also want to mention work by people like Gareth Roberts \url{https://www.drgarethroberts.com/} on growing langs in the lab.}.
+These we term ``classical'' approaches in analogy to \emph{classical} machine learning.
+This research serves as historical precedent for deep learning-based emergent language research and is by no means obsolete as an approach, but this work will focus on deep learning-based approaches due to a larger perceived potential.
+
+\subsection{Deep learning approaches to emergent language}
+The advent of deep, general-purpose neural networks has set the stage for the primary \drm{dominant?} approach to emergent language which this work will address.
+The skeleton of this approach realizing language-learning agents as neural networks which are trained using multi-agent reinforcement learning and stochastic gradient descent.
+What makes this approach distinct from classical approaches is that general-purpose neural network dramatically decrease the constraining inductive biases which would otherwise trivialize the truly \emph{emergent} properties of language learned by the agents.
+
+\subsection{Defining ``emergent''}
+\bjb{Inherently tricky to define. I think it would best to go with some pragmatically-focused, operationalizable idea of ``emergence'' which respects the literature but doesn't get caught in the details.}
+
+\section{What emergent language can do}
+Natural language processing, as typically pursued, starts with human language as a whole and tries to model it at progressively deeper levels; this can be thought of as a ``top-down'' paradigm \drm{I'm not sure I understand what you're saying here. Can you give an example? Going from observable data to progressively higher/deeperr levels of abstraction is usually described as ``bottom-up''}.
+Emergent language, on the other hand, begins with agents which have a full understanding of whatever language they invent and progressively tries to increase the sophistication of this language; this is a ``bottom-up'' paradigm, in contrast.
+In other words, it aims at creating language-capable computer agents from first principles \drm{I'm not sure I understand this paragraph or following your analogy.}.
+We identify emergent language as the center of a potential \emph{revolution} for this reason.
+\cmg{Justify this better.}
+
+\cmg{Mention AI-driven philosophy.}
+
+\subsection{Embodied language}
+\citet{bisk_experience_2020} argue that human language, in all its complexity, can only be understood in conjunction with \emph{embodiment}.
+Language is not a self-contained system of textual symbols. It necessarily connects to speech and hearing, acting and reacting, and interaction with other language users.
+\cmg{Cite GPT3 and how it casts some doubt on this.} \drm{I don't think GPT-3 does cast doubt on this, if you look at the kind of semantic tasks the model is good at (and not good at).}
+
+The problem which this line of thinking unveils is that in order for models to acquire increasingly deep understanding of language, they require training data which is increasingly hard to acquire.
+Massive language models like GPT3 \cmg{cite} require massive amounts of data.
+This has been achieved \cmg{mention world scope} on the level of text by scraping the World Wide Web.
+This could feasibly be done (although not without ethical concerns) for audio and video data from platforms like YouTube, Zoom, and surveillance cameras.
+But adding in the physical and interactive social dimensions all but requires an army of robots to be raised as if they were children.\footnote{I emphatically do not endorse this.}
+
+Emergent language provides a way around this problem as simulations of audio, video, physics, and interaction can be scaled merely by scaling computing resources.
+Going the route of emergent language, of course, introduces its own set of problems which we discuss at more length in \cref{sec:prereqs}.
+
+
+\subsection{Self-play and emergent behavior}
+Emergent language builds off of the paradigm of \emph{self-play} from reinforcement learning.
+The idea is that the computer agent can discover solutions to complex problems simply by playing against itself in a game with minimal or no expert guidance.
+This is most marvelously demonstrated in AlphaZero \cmg{cite}, a computer program which learned to play go, a game of immense strategic complexity, at superhuman levels.
+Not only did it rediscover strategies know to humans but also discovered new ones despite the games centuries-old history.
+
+\cmg{OpenAI hide and seek}
+\cmg{OpenAI Five}
+\cmg{AlphaZero}
+
+\chapter{The Applications of Emergent Language Research}\label{sec:goals}
+\cmg{Maybe in light of the changes, it is not worthwhile to divide these up between engineering and science. It still might be useful to state the knowledge/praxis distinction but not create an ontology out of it.} \drm{I agree that this distinction is not completely clear-cut and reifying it may not be helpful.}
+\section{Knowledge-driven goals}
+\subsection{Evolution of language}
+\subsection{Components of language}
+\subsection{Interaction and language}
+\subsection{General principles of communication}
+\section{Task-driven goals}
+\subsection{Alternative data paradigm}
+\subsection{Communicating with humans}
+\subsection{Robust multi-agent communication}
+\subsection{Improving emergent language techniques}
+
+% It is probably good to talk about replicating human language explicitly but
+% it should not be a central part of the thesis because it seems too ambitious
+% and hard define.
+
+\chapter{Intrinsic Metrics}
+\section{What intrinsic metrics are}
+\section{Examples of intrinsic metrics}
+\chapter{Extrinsic Metrics}
+\section{What extrinsic metrics are}
+\section{Examples of extrinsic metrics}
+
+\chapter{The Role of Metrics in Research}
+\section{Taxonomy from intrinsic metrics}
+\section{Benchmarking with extrinsic metrics}
+\section{Predicting extrinsic from intrinsic}
+\section{Gauging progress generally}
+
+\bibliographystyle{plainnat}
+\bibliography{custom,zotero}
+
