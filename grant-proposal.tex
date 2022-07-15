@@ -12,26 +12,52 @@ Large language models like GPT-3 \cmg{cite} demonstrate that many of the nuances
 % As such, the combination of these two techniques in emergent language is a research program unto itself.
 Such models rely on massive amounts of ground truth data to train on.
 
-Since emergent language research started in 2016, over $100$ papers have been published on the subject, but there has yet to be an emergent language surpassing a rudimentary level.
-In general, emergent language is a difficult topic despite the successes of self-play and neural networks.
-In emergent language, the ultimate goal of the environments is to foster human language-like communication---not easily measurable like in traditional self-play.
-And the language-generating neural networks are only trained on each other's output---no ground truth language like large language models.
+Simulating the evolution of human-like language from scratch would be an invaluable tool in the fields of linguistics and natural language processing (NLP).
+While mathematical models of the evolution of language have been used for a long time in linguistics, they require imparting simplifying assumptions and inductive biases to the language being modelled.
+Leveraging deep neural networks which are trained in arbitrarily complex reinforcement learning environments could provide a much more detailed account of language evolution with fewer inductive biases.
+As mentioned above, large language models in NLP are extremely data-hungry to the point that the only way to gather enough data is to blindly crawling the Web \cmg{look more into this} for high-resource languages.
+High-resource languages only represent a fraction of the linguistic diversity in the world meaning model development can overfit to a narrow range of typological features; furthermore, any biases or harmful content in the Web crawl will be imbibed and possibly amplified by the model.
+Emergent language would provide an arbitrarily scalable source of language which is highly \emph{controllable} since the environment which produces the emergent language is itself wholly controllable.
 
-One of the largest contributing factors here is that emergent language is very open-ended and, as such, contains a large number of variables in any given experiment.
-As a result, research papers in the field are often disconnected and ``one-off'', as opposed to incrementally making progress toward a unified goal.
-\cmg{Probably need one more sentence before this.}
-In order to better support connected research based on a unified view of the field, we propose developing and implementing an automatic method for summarizing emergent languages.
-Such summaries would allow researchers to quickly understand the high-level characteristics of an emergent language within well-defined taxonomy without having read through the individual papers themselves.
 
+% Since emergent language research started in 2016, over $100$ papers have been published on the subject, but there has yet to be an emergent language surpassing a rudimentary level.
+Despite the successes of self-play and neural networks, combining these techniques in emergent language is challenge in itself.
+Simulating the evolution of language is open-ended unlike the well-defined problems of typical reinforcement learning.
+Furthermore, there is no ground truth data as would be used to train large language models, the emergent language data is entirely bootstrapped.
+One of the primary problems, then, of emergent language research is a multiplicity of variables and design choices \cmg{expand here} and a resulting lack of organization in research efforts.
+As a result, research papers in the field are often disconnected and ``one-off'' and do not make significant progress towards the applications of emergent language.
+\cmg{Improve illustration here.}
+
+In order to advance emergent language and apply it to linguistics and NLP, it is necessary for researchers to understand emergent languages and their environments within a coherent conceptual framework.
+That is, there must be a way to easily compare emergent languages in light of their inherent flexibility and variety.
+Only then will it be possible to understand the gaps current research and the next steps necessary for advancing the techniques of emergent language.
+Emergent languages are comparable insofar as their most important characteristics are mapped into a unified ``space'' of qualitative and quantitative variables.
+Currently, the only way to compare emergent languages is to read the individual papers, mapping them into an \emph{ad hoc} ontology---neither efficient nor effective.
+
+To this end, we propose developing and implementing an automatic method for mapping emergent languages \bjb{and their environments?} into a unified semantic space.
+This semantic space contains the key characteristics of emergent languages, in particular those which are relevant to the applications in linguistics and NLP.\spacefactor\sfcode`.{}
+For linguistics, the characteristics focus on various identifiable structures of the language at different levels; for example, this would include lexical (e.g., entropy), syntactic (e.g., context sensitivity), and semantic (e.g., compositionality) properties.
+For NLP, the characteristics are more data driven and measure the degree to which emergent language data is an effective replacement for human language data in various NLP tasks.
+The primary intuition here is that the more human-like an emergent language in its lexical distribution, syntactic structure, underlying semantics, etc., the more effective it will be as a replacement for human language in these tasks.
+
+At a high level, the metric will be implemented as a Python program or web interface that takes a corpus of an emergent language (possibly with other metadata), and produces collection of quantitative and categorical metrics that give summary or a ``snapshot'' of the language.
+The output of such a program will directly improve emergent language researchers' ability to analyze prior work and identify gaps in the landscape of emergent language.
+Such gaps point to the issues in the field of emergent language that will enable its applications to linguistics and NLP.\spacefactor\sfcode`.{}
+\cmg{Briefly and forcefully illustrate how the summarizer will be used; restate the impact.}
+
+\bjb{Consistently talk about ``emergent languages'' or ``emergent language environments'' or something else.}
+
+
+
+% In order to better support connected research based on a unified view of the field, we propose developing and implementing an automatic method for summarizing emergent languages.
+% Such summaries would allow researchers to quickly understand the high-level characteristics of an emergent language within well-defined taxonomy without having read through the individual papers themselves.
 % Current research in emergent language has been focused on finding the conditions (e.g., environments, neural network architectures) under which communication arises that has the basic properties of human language.
 % \cmg{compositionality and generalizability}
 
-Despite the resulting accumulation of many pieces of knowledge and evidence, the orchestration of this collection into a cohesive whole is largely absent.
-One factor in this is a relatively narrow focus in analyzing emergent language; research is primarily concerned with characterizing compositionality and generalizability in emergent language.
-Although these properties are fundamental to emergent language, they are not alone sufficient to characterize and summarize the relevant properties of an emergent language.
-Hence, we propose introducing and implementing a set of metrics which serve generate a ``snapshot'' or ``summary'' of an emergent language so as to understand a handful of high-level characteristics regarding its form and function without needing to dig into the exact implementation itself.
-
-\cmg{clear statement of what is being proposed}
+% Despite the resulting accumulation of many pieces of knowledge and evidence, the orchestration of this collection into a cohesive whole is largely absent.
+% One factor in this is a relatively narrow focus in analyzing emergent language; research is primarily concerned with characterizing compositionality and generalizability in emergent language.
+% Although these properties are fundamental to emergent language, they are not alone sufficient to characterize and summarize the relevant properties of an emergent language.
+% Hence, we propose introducing and implementing a set of metrics which serve generate a ``snapshot'' or ``summary'' of an emergent language so as to understand a handful of high-level characteristics regarding its form and function without needing to dig into the exact implementation itself.
 
 \subsection*{Outline}
 
