@@ -4,48 +4,73 @@
 
 \section{Introduction}
 
-The field of emergent language combines the technique of self-play from reinforcement learning and the language-learning ability of neural networks to simulate the evolution of language from scratch.
-Work like \cmg{cite AlphaZero, MuZero} and \cmg{cite OpenAI hide and seek} have demonstrated that sophisticated, interpretable behavior can emerge from learning and environment dynamics alone without additional human input.
-Yet these successes have taken place in environments with clear, measurable goals (e.g., winning at chess, increasing score in Pac-Man).
-Large language models like GPT-3 \cmg{cite} demonstrate that many of the nuances and complexities of language can be captured in neural networks.
-% These techniques, while effective, do not ``automatically work'' and require careful engineering of the environment, input data, and learning algorithm to be successful.
-% As such, the combination of these two techniques in emergent language is a research program unto itself.
-Such models rely on massive amounts of ground truth data to train on.
+The field of emergent language combines the concept of self-play from reinforcement learning and the language-learning ability of neural networks to simulate the evolution of language from scratch.
+Work like AlphaZero \citep{silver2017mastering}, MuZero \citep{schrittwiser2020mastering}, and \citet{Baker2020Emergent} has demonstrated that human-like strategies can emerge in games like go, chess, and hide-and-seek from learning and environment dynamics alone (i.e., self-play), without additional human input.
+Large language models like GPT-3 \citep{brown2020language} demonstrate that many of the nuances and complexities of language can be captured by deep neural networks.
+Thus, the central goal of emergent language research is is to simulate the evolution of human language at a high level of granularity by training deep neural networks with self-play.
+Simulating the evolution of human-like language from scratch would enable experiments in linguistics and NLP applications that would otherwise be impossible.
 
-Simulating the evolution of human-like language from scratch would be an invaluable tool in the fields of linguistics and natural language processing (NLP).
-While mathematical models of the evolution of language have been used for a long time in linguistics, they require imparting simplifying assumptions and inductive biases to the language being modelled.
-Leveraging deep neural networks which are trained in arbitrarily complex reinforcement learning environments could provide a much more detailed account of language evolution with fewer inductive biases.
-As mentioned above, large language models in NLP are extremely data-hungry to the point that the only way to gather enough data is to blindly crawling the Web \cmg{look more into this} for high-resource languages.
-High-resource languages only represent a fraction of the linguistic diversity in the world meaning model development can overfit to a narrow range of typological features; furthermore, any biases or harmful content in the Web crawl will be imbibed and possibly amplified by the model.
-Emergent language would provide an arbitrarily scalable source of language which is highly \emph{controllable} since the environment which produces the emergent language is itself wholly controllable.
+While mathematical models of the evolution of language have been used for a long time in linguistics, they require introducing many simplifying assumptions and inductive biases to the simulation.
+% With deep neural networks, the complexity which they are capable of accounting for can be arbitrarily scaled meaning that the level of granularity at which language evolution could be modeled could be decreased arbitrarily.
+Deep neural networks, on the other hand, can be continually scaled up to account for more and more complexities in the data they model.
+Thus, using them to model the evolution of language would allow for a commensurate scaling in complexity and granularity of the simulation.
+Such simulations would provide unprecedentedly  detailed experimental methods for studying the origin and evolution of human language.
+\bjb{It is important to mention here that one of the other ingredients in emergent language is that the neural networks learn strategies which are derived from ``first principles'', that is, the environment.}
+
+% \ldots to the point \cmg{wording} that the only way to gather enough data is to blindly crawling \cmg{wording} the Web \cmg{look more into this} for high-resource languages \cmg{wording}.
+State-of-the-art models in NLP are extremely data-hungry---GPT-3 was trained on ${\sim}500$ billion tokens \citep{brown2020language}.
+Such a requirement greatly limits the potential sources of training data to unlabeled data from Web-crawls and personal conversations in the world's highest-resource languages.
+Thus, tasks which require the following would fail to fully benefit from GPT3-scale models:
+    low- and medium-resource language data,
+    labelled data,
+    multi-modal and embodied language,
+    or data free from offensive language.
+% High-resource languages only represent a fraction of the linguistic diversity in the world meaning model development can overfit to a narrow range of typological features; furthermore, any biases or harmful content in the Web crawl will be imbibed and possibly amplified by the model \cmg{These seem like weak reasons. What is the killerest of apps?}.
+Emergent language simulations can scale directly with compute resources and hence could meet the needs of GPT-3-scale models.
+But more importantly, emergent languages are highly \emph{controllable} since they emerge from the fully-specified first principles; for example, the structure of the emergent language could be encouraged to be similar to that of low-resource languages, improving the outcomes of transfer learning.
+Furthermore, since emergent languages always emerge from a fully observable and controllable \emph{environment}, it would be possible to generate labelled and embodied data from the simulations since the grounding of the semantics would as available as the language itself.
 
 
 % Since emergent language research started in 2016, over $100$ papers have been published on the subject, but there has yet to be an emergent language surpassing a rudimentary level.
-Despite the successes of self-play and neural networks, combining these techniques in emergent language is challenge in itself.
-Simulating the evolution of language is open-ended unlike the well-defined problems of typical reinforcement learning.
-Furthermore, there is no ground truth data as would be used to train large language models, the emergent language data is entirely bootstrapped.
-One of the primary problems, then, of emergent language research is a multiplicity of variables and design choices \cmg{expand here} and a resulting lack of organization in research efforts.
-As a result, research papers in the field are often disconnected and ``one-off'' and do not make significant progress towards the applications of emergent language.
-\cmg{Improve illustration here.}
+Despite the successes of self-play and large language models, combining these techniques in emergent language presents unique and difficult problems.
+In cases like AlphaZero playing chess against itself, rediscovering advanced chess strategies known to humans is a sort of a ``happy accident'' relative to the overall goal of learning to play chess.
+In emergent language, the primary goal is not to solve multi-agent reinforcement learning problems, but to discover these emergent strategies (in the form of language) itself.
+While the outcome of a game of chess is easy to measure, measuring the presence of an emergent phenomenon as complex and open-ended as language is far more difficult.
+% This presents an added problem because language is a more open-ended phenomenon than chess strategies.
+\cmg{Mention here how this fact leads to the multiplicity of design choices.}
+
+In contrast to large language models,
+    there is no ground truth data to train the agents' neural networks; the emergent language data is entirely bootstrapped.
+While models like GPT-3 can certainly copy the structures of human language, it is an open question whether or not such neural networks would acquire these structures without human language input.
+\bjb{I like these problems, but I do not immediately see how they motivate the problem I want to solve.}
+
+Combining the focus on emergent behavior and unconstrained neural networks results in a multitude of inherently difficult questions and design choices.
+Foremost of which is what qualifies as \emph{emergent} and what counts as \emph{language}.
+% \bjb{Would it be better for me to just state the central problem of EL (simulating the evolution of human-like language from scratch), state that this is underspecified, and blame that for why there is so little organization in the field?}
+Thus, although the field's goal of simulating the evolution of human-like language from scratch is conceptually clear, the details are underspecified.
+The result is a field with no concrete vision on what its goals are and how to progress towards them.
+This manifests in the literature which comprises papers which are often ``one-off'' and do not clearly progress towards an overarching goal of emergent language.
 
 In order to advance emergent language and apply it to linguistics and NLP, it is necessary for researchers to understand emergent languages and their environments within a coherent conceptual framework.
-That is, there must be a way to easily compare emergent languages in light of their inherent flexibility and variety.
-Only then will it be possible to understand the gaps current research and the next steps necessary for advancing the techniques of emergent language.
-Emergent languages are comparable insofar as their most important characteristics are mapped into a unified ``space'' of qualitative and quantitative variables.
+That is, there must be a way to easily compare emergent languages despite their inherent flexibility and variety.
+Only then will it be possible to understand the gaps in existing approaches and the next steps necessary for advancing the techniques of emergent language.
+Emergent languages are comparable insofar as their most important characteristics are mapped into a unified ``space'' of categorical and numerical variables.
 Currently, the only way to compare emergent languages is to read the individual papers, mapping them into an \emph{ad hoc} ontology---neither efficient nor effective.
 
 To this end, we propose developing and implementing an automatic method for mapping emergent languages \bjb{and their environments?} into a unified semantic space.
-This semantic space contains the key characteristics of emergent languages, in particular those which are relevant to the applications in linguistics and NLP.\spacefactor\sfcode`.{}
-For linguistics, the characteristics focus on various identifiable structures of the language at different levels; for example, this would include lexical (e.g., entropy), syntactic (e.g., context sensitivity), and semantic (e.g., compositionality) properties.
-For NLP, the characteristics are more data driven and measure the degree to which emergent language data is an effective replacement for human language data in various NLP tasks.
+This semantic space contains the key characteristics of emergent languages, in particular those which are relevant to the applications in linguistics and NLP.\sentspace{}
+For linguistics, the characteristics focus on various identifiable structures of the language; for example, this would include lexical (e.g., entropy), syntactic (e.g., context sensitivity), and semantic (e.g., compositionality) properties.
+For NLP, the characteristics are more data-driven and measure the degree to which emergent language data is an effective replacement for human language data in various NLP tasks.
 The primary intuition here is that the more human-like an emergent language in its lexical distribution, syntactic structure, underlying semantics, etc., the more effective it will be as a replacement for human language in these tasks.
 
-At a high level, the metric will be implemented as a Python program or web interface that takes a corpus of an emergent language (possibly with other metadata), and produces collection of quantitative and categorical metrics that give summary or a ``snapshot'' of the language.
+At a high level, the metric will be implemented as command line tool or web interface that takes a corpus of an emergent language (possibly with other metadata), and produces collection of quantitative and categorical metrics that give summary or a ``snapshot'' of the language.
+The summary will be easy to interpret even for researchers not familiar with the details of reinforcement learning or neural networks.
 The output of such a program will directly improve emergent language researchers' ability to analyze prior work and identify gaps in the landscape of emergent language.
-Such gaps point to the issues in the field of emergent language that will enable its applications to linguistics and NLP.\spacefactor\sfcode`.{}
+This is critical to the overall research process which advance emergent language to the point of fulfilling its applications to linguistics and NLP.\sentspace{}
 \cmg{Briefly and forcefully illustrate how the summarizer will be used; restate the impact.}
+\bjb{Mention that this will be like a hybrid of GLUE and WALS?}
 
-\bjb{Consistently talk about ``emergent languages'' or ``emergent language environments'' or something else.}
+\bjb{Use consistent terminology: ``emergent languages'', ``emergent language environments'', or something else.}
 
 
 
@@ -59,16 +84,16 @@ Such gaps point to the issues in the field of emergent language that will enable
 % Although these properties are fundamental to emergent language, they are not alone sufficient to characterize and summarize the relevant properties of an emergent language.
 % Hence, we propose introducing and implementing a set of metrics which serve generate a ``snapshot'' or ``summary'' of an emergent language so as to understand a handful of high-level characteristics regarding its form and function without needing to dig into the exact implementation itself.
 
-\subsection*{Outline}
-
-\begin{enumerate}
-    \item Emergent language shows great promise by leveraging self-play and neural networks.
-    \item No convincing applications have been developed yet.
-    \item Research papers are disconnected, exploring problems in semi-isolation partly because there are so many variables in emergent language.
-    \item Without an organized way to look at these manifold variables, it is difficult to determine how results from one experiment apply to another since there is no way to account for confounding factors.
-    \item We propose a method for automatically summarizing emergent languages.
-    \item This will facilitate better organization.
-\end{enumerate}
+% \subsection*{Outline}
+% 
+% \begin{enumerate}
+%     \item Emergent language shows great promise by leveraging self-play and neural networks.
+%     \item No convincing applications have been developed yet.
+%     \item Research papers are disconnected, exploring problems in semi-isolation partly because there are so many variables in emergent language.
+%     \item Without an organized way to look at these manifold variables, it is difficult to determine how results from one experiment apply to another since there is no way to account for confounding factors.
+%     \item We propose a method for automatically summarizing emergent languages.
+%     \item This will facilitate better organization.
+% \end{enumerate}
 
 \section{Summarizing Emergent Language}
 
