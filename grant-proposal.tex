@@ -51,9 +51,15 @@ Thus, although the field's goal of simulating the evolution of human-like langua
 The result is a field with no concrete vision on what its goals are and how to progress towards them.
 This manifests in the literature which comprises papers which are often ``one-off'' and do not clearly progress towards an overarching goal of emergent language.
 
-In order to advance emergent language and apply it to linguistics and NLP, it is necessary for researchers to understand emergent languages and their environments within a coherent conceptual framework.
-That is, there must be a way to easily compare emergent languages despite their inherent flexibility and variety.
-Only then will it be possible to understand the gaps in existing approaches and the next steps necessary for advancing the techniques of emergent language.
+In order to advance emergent language and apply it to linguistics and NLP, it is necessary for researchers to have a concrete formulation of the goals of the field and, most especially, a way to measure progress towards these goals.
+This requires a way to characterize emergent languages in terms of their most salient properties.
+Salience, in this case, is determined by the goals of a given research program.
+For example, linguistics, generally speaking, will be most interested in measuring the ways in which an emergent language is like a human language, for example: lexical distribution, syntactic structure, and cognitive constraints on the agents.
+For NLP, on the other hand, it would be more important to measure how well the emergent language is working as a substitute for real data or how resource-efficient generating the emergent language is.
+
+While all fields in machine learning need goals and methods of measuring progress, most fields develop them organically and implicitly.
+The need for an explicit characterization, as we propose, arises from the inherent variety and open-endedness of emergent language.
+Only with such an explicit characterization will it be possible for researchers to easily understand the gaps in existing approaches and the next steps necessary for advancing the techniques of emergent language.
 Emergent languages are comparable insofar as their most important characteristics are mapped into a unified ``space'' of categorical and numerical variables.
 Currently, the only way to compare emergent languages is to read the individual papers, mapping them into an \emph{ad hoc} ontology---neither efficient nor effective.
 
@@ -64,36 +70,34 @@ For NLP, the characteristics are more data-driven and measure the degree to whic
 The primary intuition here is that the more human-like an emergent language in its lexical distribution, syntactic structure, underlying semantics, etc., the more effective it will be as a replacement for human language in these tasks.
 
 At a high level, the metric will be implemented as command line tool or web interface that takes a corpus of an emergent language (possibly with other metadata), and produces collection of quantitative and categorical metrics that give summary or a ``snapshot'' of the language.
-The summary will be easy to interpret even for researchers not familiar with the details of reinforcement learning or neural networks.
-The output of such a program will directly improve emergent language researchers' ability to analyze prior work and identify gaps in the landscape of emergent language.
-This is critical to the overall research process which advance emergent language to the point of fulfilling its applications to linguistics and NLP.\sentspace{}
+The tools will comprise aspects of both WALS \citep{wals} and GLUE \citep{wang2018glue}.
+WALS (the World Atlas of Language Structures) \citep{wals} is, in essence, a table where each row is language and each column is a linguistic feature of the language (e.g., word order, number of consonants, presence of case markings).
+\bjb{Does WALS introduce/enforce a standardized way of evaluating each of these characteristics?}
+GLUE \citep{wang2018glue} is a benchmark and diagnostic tool for NLP models comprising a collection of natural language understanding tasks.
+The diagnostic portion of GLUE contains specially labelled data which helps developers to determine the particular areas in which their model performs well or poorly.
+
+Both WALS and GLUE are invaluable tools to researchers because they enable one to quickly ascertain the basic facts about a language or NLP model without needing to dive into individual papers.
+This is especially helpful to practitioners outside of the particular field who are looking to integrate knowledge from linguistics/NLP into their own field.
+Furthermore, separate entries can easily be compared since they are analyzed according to the same framework.
+Finally, being able to collect a representative sample of comparable entries highlights the yet unexplored areas and hints towards the most fruitful directions for future research.
+
+\newpage
+
+Thus, our tool seeks to adapt work like WALS and GLUE to the issues unique to emergent language.
+Naturally, this entails formulating the constituent characteristics and tasks in light of the goals emergent language.
+While linguistics and NLP have robust pre-existing methods of evaluation, emergent language does not.
+As a result, a significant portion of the proposed work will be developing these methods of evaluation and not simply selecting them.
+
 \cmg{Briefly and forcefully illustrate how the summarizer will be used; restate the impact.}
-\bjb{Mention that this will be like a hybrid of GLUE and WALS?}
+
+% There are two main contributions described by this proposal.
+% \begin{enumerate}
+%     \item Knowledge
+%     \item Software
+% \end{enumerate}
 
 \bjb{Use consistent terminology: ``emergent languages'', ``emergent language environments'', or something else.}
 
-
-
-% In order to better support connected research based on a unified view of the field, we propose developing and implementing an automatic method for summarizing emergent languages.
-% Such summaries would allow researchers to quickly understand the high-level characteristics of an emergent language within well-defined taxonomy without having read through the individual papers themselves.
-% Current research in emergent language has been focused on finding the conditions (e.g., environments, neural network architectures) under which communication arises that has the basic properties of human language.
-% \cmg{compositionality and generalizability}
-
-% Despite the resulting accumulation of many pieces of knowledge and evidence, the orchestration of this collection into a cohesive whole is largely absent.
-% One factor in this is a relatively narrow focus in analyzing emergent language; research is primarily concerned with characterizing compositionality and generalizability in emergent language.
-% Although these properties are fundamental to emergent language, they are not alone sufficient to characterize and summarize the relevant properties of an emergent language.
-% Hence, we propose introducing and implementing a set of metrics which serve generate a ``snapshot'' or ``summary'' of an emergent language so as to understand a handful of high-level characteristics regarding its form and function without needing to dig into the exact implementation itself.
-
-% \subsection*{Outline}
-% 
-% \begin{enumerate}
-%     \item Emergent language shows great promise by leveraging self-play and neural networks.
-%     \item No convincing applications have been developed yet.
-%     \item Research papers are disconnected, exploring problems in semi-isolation partly because there are so many variables in emergent language.
-%     \item Without an organized way to look at these manifold variables, it is difficult to determine how results from one experiment apply to another since there is no way to account for confounding factors.
-%     \item We propose a method for automatically summarizing emergent languages.
-%     \item This will facilitate better organization.
-% \end{enumerate}
 
 \section{Summarizing Emergent Language}
 
