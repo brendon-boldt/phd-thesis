@@ -20,21 +20,21 @@ Such simulations would provide unprecedentedly  detailed experimental methods fo
 % \ldots to the point \cmg{wording} that the only way to gather enough data is to blindly crawling \cmg{wording} the Web \cmg{look more into this} for high-resource languages \cmg{wording}.
 State-of-the-art models in NLP are extremely data-hungry---GPT-3 was trained on ${\sim}500$ billion tokens \citep{brown2020language}.
 Such a requirement greatly limits the potential sources of training data to unlabeled data from Web-crawls and personal conversations in the world's highest-resource languages.
-Thus, tasks which require the following would fail to fully benefit from GPT3-scale models:
+Thus, tasks which require the following would fail to fully benefit from GPT-3-scale models:
     low- and medium-resource language data,
     labelled data,
     multi-modal and embodied language,
     or data free from offensive language.
 % High-resource languages only represent a fraction of the linguistic diversity in the world meaning model development can overfit to a narrow range of typological features; furthermore, any biases or harmful content in the Web crawl will be imbibed and possibly amplified by the model \cmg{These seem like weak reasons. What is the killerest of apps?}.
 Emergent language simulations can scale directly with compute resources and hence could meet the needs of GPT-3-scale models.
-But more importantly, emergent languages are highly \emph{controllable} since they emerge from the fully-specified first principles; for example, the structure of the emergent language could be encouraged to be similar to that of low-resource languages, improving the outcomes of transfer learning.
-Furthermore, since emergent languages always emerge from a fully observable and controllable \emph{environment}, it would be possible to generate labelled and embodied data from the simulations since the grounding of the semantics would as available as the language itself.
+But more importantly, emergent languages are highly \emph{controllable} since they emerge from the fully-specified first principles \cmg{awk}; for example, the structure of the emergent language could be encouraged to be similar to that of low-resource languages, improving the outcomes of transfer learning.
+Furthermore, since emergent languages always emerge from a fully observable and controllable \emph{environment}, it would be possible to generate labelled and embodied data from the simulations since the grounding of the semantics would as available \cmg{accessible?} as the language itself.
 
 
 % Since emergent language research started in 2016, over $100$ papers have been published on the subject, but there has yet to be an emergent language surpassing a rudimentary level.
 Despite the successes of self-play and large language models, combining these techniques in emergent language presents unique and difficult problems.
 In cases like AlphaZero playing chess against itself, rediscovering advanced chess strategies known to humans is a sort of a ``happy accident'' relative to the overall goal of learning to play chess.
-In emergent language, the primary goal is not to solve multi-agent reinforcement learning problems, but to discover these emergent strategies (in the form of language) itself.
+In emergent language, the primary goal is not to solve multi-agent reinforcement learning problems, but to discover these emergent strategies (in the form of language) themselves.
 While the outcome of a game of chess is easy to measure, measuring the presence of an emergent phenomenon as complex and open-ended as language is far more difficult.
 % This presents an added problem because language is a more open-ended phenomenon than chess strategies.
 \cmg{Mention here how this fact leads to the multiplicity of design choices.}
@@ -60,7 +60,7 @@ For NLP, on the other hand, it would be more important to measure how well the e
 While all fields in machine learning need goals and methods of measuring progress, most fields develop them organically and implicitly.
 The need for an explicit characterization, as we propose, arises from the inherent variety and open-endedness of emergent language.
 Only with such an explicit characterization will it be possible for researchers to easily understand the gaps in existing approaches and the next steps necessary for advancing the techniques of emergent language.
-Emergent languages are comparable insofar as their most important characteristics are mapped into a unified ``space'' of categorical and numerical variables.
+Emergent languages are comparable \cmg{word not qualified} insofar as their most important characteristics are mapped into a unified ``space'' of categorical and numerical variables.
 Currently, the only way to compare emergent languages is to read the individual papers, mapping them into an \emph{ad hoc} ontology---neither efficient nor effective.
 
 To this end, we propose developing and implementing an automatic method for mapping emergent languages \bjb{and their environments?} into a unified semantic space.
@@ -69,7 +69,7 @@ For linguistics, the characteristics focus on various identifiable structures of
 For NLP, the characteristics are more data-driven and measure the degree to which emergent language data is an effective replacement for human language data in various NLP tasks.
 The primary intuition here is that the more human-like an emergent language in its lexical distribution, syntactic structure, underlying semantics, etc., the more effective it will be as a replacement for human language in these tasks.
 
-At a high level, the metric will be implemented as command line tool or web interface that takes a corpus of an emergent language (possibly with other metadata), and produces collection of quantitative and categorical metrics that give summary or a ``snapshot'' of the language.
+At a high level, the metric will be implemented as a command line tool or web interface that takes a corpus of an emergent language (possibly with other metadata), and produces a collection of quantitative and categorical metrics that give a summary or a ``snapshot'' of the language.
 The tools will comprise aspects of both WALS \citep{wals} and GLUE \citep{wang2018glue}.
 WALS (the World Atlas of Language Structures) \citep{wals} is, in essence, a table where each row is language and each column is a linguistic feature of the language (e.g., word order, number of consonants, presence of case markings).
 \bjb{Does WALS introduce/enforce a standardized way of evaluating each of these characteristics?}
@@ -79,10 +79,10 @@ The diagnostic portion of GLUE contains specially labelled data which helps deve
 Both WALS and GLUE are invaluable tools to researchers because they enable one to quickly ascertain the basic facts about a language or NLP model without needing to dive into individual papers.
 This is especially helpful to practitioners outside of the particular field who are looking to integrate knowledge from linguistics/NLP into their own field.
 Furthermore, separate entries can easily be compared since they are analyzed according to the same framework.
-Finally, being able to collect a representative sample of comparable entries highlights the yet unexplored areas and hints towards the most fruitful directions for future research.
+Finally, being able to collect a representative sample of comparable entries highlights the yet unexplored areas \cmg{awk} and hints towards the most fruitful directions for future research.
 
 Thus, our tool seeks to adapt work like WALS and GLUE to the issues unique to emergent language.
-Naturally, this entails formulating the constituent characteristics and tasks in light of the goals emergent language.
+Naturally, this entails formulating the constituent characteristics and tasks in light of the goals of emergent language.
 While linguistics and NLP have robust pre-existing methods of evaluation, emergent language does not.
 As a result, a significant portion of the proposed work will be developing these methods of evaluation and not simply selecting them.
 
