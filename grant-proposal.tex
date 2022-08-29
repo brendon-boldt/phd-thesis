@@ -10,12 +10,6 @@
 % - Disentangle WALS and GLUE discussion; don't juxtapose them
 % - Make sure to cite the highest-impact work in the review.
 
-% Assignment for today’s meeting:
-%   1. Write punchy, one-sentence summary of what you will accomplish in this project
-%   2. Write 3-4 bullets points (1 sentence each) expanding this summary
-%   3. Write punchy, one-sentence summary of what this research will contribute
-%   4. Write 3–4 bullet points (1 sentence each) supporting this claim
-
 In this project, we will develop a collection of algorithms for comparing emergent languages by automatically
     generating a linguistic analysis of a given emergent language
     and benchmarking its similarity to human language using deep learning methods from NLP\@.
@@ -46,6 +40,33 @@ Such a method for comparing emergent languages is a precondition for the field o
 
 \section{Introduction}
 
+An emergent language is a communication system which develop from scratch through neural network-based agents learning to cooperate and coordinate in a multi-agent reinforcement learning environment.
+In this project, we will develop a collection of techniques for comparing emergent languages by automatically generating a linguistic analysis of a given emergent language and benchmarking its similarity to human language using deep learning methods from natural language processing (NLP).
+This collection of techniques will serve as a common ground to compare, with low cognitive overhead, a wide variety of emergent languages much in the same way that benchmarks like GLUE \citep{wang2018glue} compare machine learning models or WALS \citep{wals} compares human languages based on typology.
+Such a method for comparing emergent languages is a precondition for the field of emergent language applying its unique and unprecedented methods to linguistics, NLP, and beyond.
+
+The exact analyses which this collection of techniques performs will be directly motivated by the applications of emergent language to fields of linguistics and NLP.\sentspace{}
+The content of the linguistic analyses in particular will be determined by the set of characteristics which human and emergent languages need to share in order for emergent language to be realistic enough to account for: 
+    the origins of language, the emergence of syntax and semantics, language acquisition, language within social systems, and more.
+The primary means by which emergent language does this is through providing high-precision simulations of language emerging from first principles rather than through highly structured theoretical models.
+
+The data-driven, deep learning-based analyses will evaluate the nuances and ``long-tail'' phenomena in emergent language that handwritten linguistic analyses often struggle to capture.
+These long-tail phenomena in human language are one of the motivating factors for the shift from symbolic, handwritten methods in NLP to deep neural networks trained on large data.
+Thus, when emergent language demonstrate these phenomena, it serves as a scalable source of highly realistic synthetic data.
+Such data is critical to the development of large, data-hungry neural networks for low-resource domains like endangered languages and multi-modal tasks.
+
+Current emergent language research has tended towards unfocused exploration and not made significant progress towards these applications despite over $100$ papers and $5$ years of research.
+One major contributing factor is that there is that the only way to understand the landscape of emergent languages in the current literature is to read each paper individually.
+What is needed is a method for succinctly and effectively summarizing the most salient characteristics of emergent languages.
+Developing such common ground for comparing emergent languages is necessary for guiding future research such that the applications of emergent language clearly demonstrated and utilized.
+
+
+\begin{comment}
+
+\subsection{Background}
+
+\begin{center}***\end{center}
+
 The field of emergent language combines the concept of self-play from reinforcement learning and the language-learning ability of neural networks to simulate the evolution of language from scratch.
 Work like AlphaZero \citep{silver2017mastering}, MuZero \citep{schrittwiser2020mastering}, and \citet{Baker2020Emergent} has demonstrated that human-like strategies can emerge in games like go, chess, and hide-and-seek from learning and environment dynamics alone (i.e., self-play), without additional human input.
 Large language models like GPT-3 \citep{brown2020language} demonstrate that many of the nuances and complexities of language can be captured by deep neural networks.
@@ -57,7 +78,6 @@ While mathematical models of the evolution of language have been used for a long
 Deep neural networks, on the other hand, can be continually scaled up to account for more and more complexities in the data they model.
 Thus, using them to model the evolution of language would allow for a commensurate scaling in complexity and granularity of the simulation.
 Such simulations would provide unprecedentedly  detailed experimental methods for studying the origin and evolution of human language.
-\bjb{It is important to mention here that one of the other ingredients in emergent language is that the neural networks learn strategies which are derived from ``first principles'', that is, the environment.}
 
 % \ldots to the point \cmg{wording} that the only way to gather enough data is to blindly crawling \cmg{wording} the Web \cmg{look more into this} for high-resource languages \cmg{wording}.
 State-of-the-art models in NLP are extremely data-hungry---GPT-3 was trained on ${\sim}500$ billion tokens \citep{brown2020language}.
@@ -111,7 +131,9 @@ For linguistics, the characteristics focus on various identifiable structures of
 For NLP, the characteristics are more data-driven and measure the degree to which emergent language data is an effective replacement for human language data in various NLP tasks.
 The primary intuition here is that the more human-like an emergent language in its lexical distribution, syntactic structure, underlying semantics, etc., the more effective it will be as a replacement for human language in these tasks.
 
+\sout{
 At a high level, the metric will be implemented as a command line tool or web interface that takes a corpus of an emergent language (possibly with other metadata), and produces a collection of quantitative and categorical metrics that give a summary or a ``snapshot'' of the language.
+}
 The tools will comprise aspects of both WALS \citep{wals} and GLUE \citep{wang2018glue}.
 WALS (the World Atlas of Language Structures) \citep{wals} is, in essence, a table where each row is language and each column is a linguistic feature of the language (e.g., word order, number of consonants, presence of case markings).
 \bjb{Does WALS introduce/enforce a standardized way of evaluating each of these characteristics?}
@@ -143,3 +165,4 @@ As a result, a significant portion of the proposed work will be developing these
 
 \section{Technical Element 1: Intrinsic Metrics}
 \section{Technical Element 2: Extrinsic Metrics}
+\end{comment}
